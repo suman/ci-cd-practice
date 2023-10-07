@@ -1,0 +1,16 @@
+name: Deployment with linting and unit testing
+on:
+  push:
+    branches: [main]
+jobs:
+  Runs-Linting-On-Ubuntu:
+    name: Runs Linting On Ubunutu
+    runs-on: Ubuntu-latest
+    steps:
+      -  uses: actions/checkout@v4
+      -  uses: actions/setup-node@v3
+         with: 
+           node-version: 14
+      -  run: npm install
+      -  run: npm run lint
+      -  run: npm run test
