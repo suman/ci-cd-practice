@@ -4,7 +4,7 @@ on:
     branches: [main]
 jobs:
   Runs-Linting-On-Ubuntu:
-    name: Runs Linting On Ubunutu
+    name: Runs npm linting
     runs-on: Ubuntu-latest
     steps:
       -  uses: actions/checkout@v4
@@ -12,5 +12,13 @@ jobs:
          with: 
            node-version: 14
       -  run: npm install
-      -  run: npm run lint
-      -  run: npm run test
+      -  run: npm lint
+    name: Runs npm unit testing
+    runs-on: Ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      -  run: npm install
+      -  run: npm run test 
