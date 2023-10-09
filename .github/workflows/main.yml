@@ -13,7 +13,9 @@ jobs:
            node-version: 14
       -  run: npm install
       -  run: npm lint
+  Runs-Unit-testing-On-Ubuntu:
     name: Runs npm unit testing
+    needs: Runs-Linting-On-Ubuntu
     runs-on: Ubuntu-latest
     steps:
       - uses: actions/checkout@v4
