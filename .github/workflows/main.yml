@@ -24,10 +24,10 @@ jobs:
           node-version: 14
       -  run: npm install
       -  run: npm run test 
-    Runs-build-On-Ubuntu:
-      name:  Runs npm build
-      needs: Runs-Unit-testing-On-Ubuntu
-      runs-on: Ubuntu-latest
-      steps: 
-        - run: npm run build
-        - run: 'ls'
+  Runs-build-On-Ubuntu:
+    name:  Runs npm build
+    needs: Runs-Unit-testing-On-Ubuntu
+    runs-on: Ubuntu-latest
+    steps: 
+      - run: npm run build
+      - run: 'ls'
