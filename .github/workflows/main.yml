@@ -12,10 +12,11 @@ jobs:
         with:
           node-version: 14
       - name: build
-        run: npm install
-        run: npm run lint
-        run: npm run test
-        run: npm run build
+        run: | 
+          npm install
+          npm lint
+          npm test
+          npm run build
       - name: upload-dist
         uses: actions/upload-artifact@v3
         with:
