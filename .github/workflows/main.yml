@@ -5,7 +5,6 @@ on:
 jobs:
   Runs-Build-On-Ubuntu:
     name: Runs npm build
-    needs: Runs-Build-On-Ubuntu
     runs-on: Ubuntu-latest
     steps:
       - uses: actions/checkout@v4
