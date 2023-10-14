@@ -18,9 +18,8 @@ jobs:
         run: npm run build
       - name: upload-dist
         uses: actions/upload-artifact@v3
-          with:
-            name: dist-files
-            path: |
-              dist
-              package.json 
- 
+        with:
+          name: dist-files
+          path: |
+            dist
+            package.json
