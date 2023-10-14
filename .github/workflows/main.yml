@@ -1,7 +1,7 @@
 name: Deployment with linting and unit testing
 on:
   push:
-    branches: [main]
+    branches: [main, upload-dist]
 jobs:
   Runs-Build-On-Ubuntu:
     name: Runs npm build
@@ -11,7 +11,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
-      - run: npm install
-      - run: npm run lint
-      - run: npm run test
-      - run: npm run build
+      - name: npm, install, run, build
+        run: npm install
+        run: npm run lint
+        run: npm run test
+        run: npm run build
+      - name: upload-dist
+        uses: actions/upload-artificat@v3
+          with:
+            name: dist-files
+            path: |
+              dist
+              package.json 
+ 
