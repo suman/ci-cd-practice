@@ -11,13 +11,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
-      - name: npm, install, run, build
+      - name: build
         run: npm install
         run: npm run lint
         run: npm run test
         run: npm run build
       - name: upload-dist
-        uses: actions/upload-artificat@v3
+        uses: actions/upload-artifcat@v3
           with:
             name: dist-files
             path: |
