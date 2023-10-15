@@ -3,24 +3,23 @@ on:
   push:
     branches: [main, upload-dist]
 jobs:
-  Runs-Build-On-Ubuntu:
-    name: Runs npm build
+  Runs-Test-On-Ubuntu:
+    name: Runs npm test
     runs-on: Ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
       - run: npm install
       - run: npm run lint
       - run: npm run test
-      - run: npm run build
   Upload-Artifact-File:
     name: Archive production artifacts
     runs-on: Ubuntu-latest
     steps:
-    - uses: actions/upload-artifact@v3
-      with:
-        name: dist-files
-        path: dist
+      - uses: actions/checkout@v4
+      - run: npm install
+      - run: npm run build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: dist
         
