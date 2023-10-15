@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
-      - name: Npm run bild
-          run: npm install
-   
+      - run: |
+          npm install
+          npm lint
+          npm run build
