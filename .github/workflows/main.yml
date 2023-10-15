@@ -24,6 +24,7 @@ jobs:
           path: dist
   Deploy:
     name: Deploy build file
+    runs-on: Ubuntu-latest
     needs: Upload-Artifact-File
     steps: 
       - run: echo "Deploying "
