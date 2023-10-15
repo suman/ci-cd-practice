@@ -29,6 +29,6 @@ jobs:
     steps: 
       - uses: actions/download-artifact@v3
         with:
-          dist-files:
+          name: dist-files
       - run: ls
       - run: echo "Deploying "
