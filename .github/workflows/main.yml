@@ -27,4 +27,8 @@ jobs:
     runs-on: Ubuntu-latest
     needs: Upload-Artifact-File
     steps: 
+      - uses: actions/download-artifact@v3
+        with:
+          dist-files:
+      - run: ls
       - run: echo "Deploying "
