@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
+      - name: Set cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          keys: deps-node-modules-${{hashFiles('**/package-lock.json')}}
       - name: Install Dependencies
         run: npm install
       - name: Run Linting
