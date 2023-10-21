@@ -35,4 +35,4 @@ jobs:
         with:
           name: dist-files
       - run: ls
-      - run: echo "Deploying "
+      - run: echo "Deploying guys"
