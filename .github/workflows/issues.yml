@@ -1,9 +1,0 @@
-name: Issue Identifier
-on: issues
-jobs:
-  ouput-issue-event:
-    name: Run echo for event detail
-    runs-on: ubuntu-latest
-    steps: 
-      - name: print event details
-        run: echo "${{toJSON(github.event)}}"
