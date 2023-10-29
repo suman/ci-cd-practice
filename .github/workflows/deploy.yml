@@ -3,6 +3,12 @@ on:
   push:
     branches:
       - env.yml
+env:
+  MONGODB_CLUSTER_ADDRESS: cluster0.5wyawrf.mongodb.net 
+  MONGODB_USERNAME: sumanroot   
+  MONGODB_PASSWORD: pIokbu93aAcU2Hc3
+  MONGODB_DB_NAME: gha-demo
+  PORT: 8080
 jobs:
   test:
     environment: testing
@@ -18,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:XYZ
+        run: npm start & npx wait-on http://127.0.0.1:$PORT
       - name: Run tests
         run: npm test
       - name: Output information
