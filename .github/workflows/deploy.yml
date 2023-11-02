@@ -5,8 +5,8 @@ on:
       - env.yml
 env:
   MONGODB_CLUSTER_ADDRESS: cluster0.5wyawrf.mongodb.net 
-  MONGODB_USERNAME: sumanroot   
-  MONGODB_PASSWORD: pIokbu93aAcU2Hc2
+  MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}} 
+  MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
   MONGODB_DB_NAME: gha-demo
   PORT: 8080
 jobs:
