@@ -6,7 +6,7 @@ on:
 env:
   MONGODB_CLUSTER_ADDRESS: cluster0.5wyawrf.mongodb.net 
   MONGODB_USERNAME: sumanroot   
-  MONGODB_PASSWORD: pIokbu93aAcU2Hc3
+  MONGODB_PASSWORD: pIokbu93aAcU2Hc2
   MONGODB_DB_NAME: gha-demo
   PORT: 8080
 jobs:
