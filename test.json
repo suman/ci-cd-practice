@@ -8,7 +8,7 @@
   "numFailedTests": 0,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "startTime": 1699108187286,
+  "startTime": 1699108319673,
   "success": true,
   "testResults": [
     {
@@ -21,7 +21,7 @@
           "fullName": " MainContent should render a button",
           "status": "passed",
           "title": "should render a button",
-          "duration": 52,
+          "duration": 56,
           "failureMessages": []
         },
         {
@@ -32,12 +32,12 @@
           "fullName": " MainContent should show the help area after clicking the button",
           "status": "passed",
           "title": "should show the help area after clicking the button",
-          "duration": 47,
+          "duration": 49,
           "failureMessages": []
         }
       ],
-      "startTime": 1699108189074,
-      "endTime": 1699108189173,
+      "startTime": 1699108321617,
+      "endTime": 1699108321722,
       "status": "passed",
       "message": "",
       "name": "/Users/macbookpro/learning/ci-cd-practice/src/components/MainContent.test.jsx"
