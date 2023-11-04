@@ -1,4 +1,4 @@
-name: Deployment with linting and unit testing
+name: Deployment withs unit testing
 on:
   push:
     branches: [main, upload-dist, control-job-workflow]
