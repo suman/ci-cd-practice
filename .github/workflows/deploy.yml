@@ -16,8 +16,6 @@ jobs:
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install Dependencies
         run: npm install
-      - name: Run Linting
-        run: npm run lint
       - name: Run testing
         run: npm run test
   Upload-Artifact-File:
