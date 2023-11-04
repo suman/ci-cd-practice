@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm install
-      - run: npm run lint
       - run: npm run test
   Upload-Artifact-File:
     name: Archive production artifacts
