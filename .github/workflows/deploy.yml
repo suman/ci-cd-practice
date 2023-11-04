@@ -1,7 +1,7 @@
 name: Deployment with linting and unit testing
 on:
   push:
-    branches: [main, upload-dist]
+    branches: [main, upload-dist, control-job-workflow]
 jobs:
   Runs-Test-On-Ubuntu:
     name: Runs npm test
